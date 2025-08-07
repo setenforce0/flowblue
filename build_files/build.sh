@@ -6,6 +6,7 @@ set -ouex pipefail
 
 dnf5 -y copr enable yalter/niri
 dnf5 -y copr enable ulysg/xwayland-satellite
+dnf5 -y copr enable trs-sod/swaylock-effects
 
 ### Dependency Groups
 
@@ -14,7 +15,7 @@ NIRI_DEPS=(
     fuzzel
     mako
     xwayland-satellite
-    swaylock
+    swaylock-effects
 )
 
 ADDITIONAL_PACKAGES=(
@@ -38,6 +39,7 @@ dnf5 install -y \
 
 dnf5 -y copr disable yalter/niri
 dnf5 -y copr disable ulysg/xwayland-satellite
+dnf5 -y copr disable trs-sod/swaylock-effects
 
 # Use a COPR Example:
 #
