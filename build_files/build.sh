@@ -15,6 +15,7 @@ NIRI_DEPS=(
     fuzzel
     mako
     xwayland-satellite
+    swaybg
 )
 
 ADDITIONAL_PACKAGES=(
