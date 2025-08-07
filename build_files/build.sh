@@ -10,6 +10,7 @@ dnf5 -y copr enable ulysg/xwayland-satellite
 ### Dependency Groups
 
 NIRI_DEPS=(
+    niri
     fuzzel
     mako
     xwayland-satellite
