@@ -15,7 +15,6 @@ NIRI_DEPS=(
     fuzzel
     mako
     xwayland-satellite
-    swaylock-effects
 )
 
 ADDITIONAL_PACKAGES=(
@@ -33,7 +32,10 @@ ADDITIONAL_PACKAGES=(
 dnf5 install -y \
     tmux \
     ${NIRI_DEPS[@]} \
-    ${ADDITIONAL_PACKAGES[@]}
+    ${ADDITIONAL_PACKAGES[@]} \
+ 
+dnf5 remove -y swaylock
+dnf5 install -y swaylock-effects
 
 ### Disable Repositories
 
